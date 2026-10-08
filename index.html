@@ -7,7 +7,7 @@
 <title>Avalos Mood Board</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Black+Han+Sans&family=Shrikhand&family=Yellowtail&family=Lora:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Black+Han+Sans&family=Shrikhand&family=Yellowtail&family=Knewave&family=Damion&family=Titan+One&family=Kaushan+Script&family=Bungee&family=Permanent+Marker&family=Lora:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 /* Layout: a working board. Reference columns on top, shared threads, then draft palettes shown as yard signs. */
 :root{
@@ -46,7 +46,7 @@ header p{color:var(--muted)}
 .threads{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
 .threads div{display:grid;gap:6px;align-content:start}
 .threads p{font-size:.95rem}
-.drafts{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.drafts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:32px 24px}
 .draft{display:grid;gap:14px;align-content:start;min-width:0}
 .sign{aspect-ratio:3/2;max-width:100%;border-radius:4px;display:grid;place-content:center;text-align:center;gap:6px;padding:20px;border:1px solid var(--line)}
 .sign .nm{font:900 clamp(2rem,6vw,2.8rem)/.9 var(--display);font-stretch:125%;letter-spacing:-.01em}
@@ -55,6 +55,12 @@ header p{color:var(--muted)}
 .cr{font:.75rem/1.5 var(--mono);color:var(--muted)}
 .cr span{color:var(--fg)}
 .draft p{font-size:.92rem}
+.letter{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.letter>div{display:grid;gap:8px;align-content:start}
+.specimens{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.spec{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:18px;display:grid;gap:8px;min-width:0}
+.spec .s{font-size:2.4rem;line-height:1;color:var(--fg)}
+.spec .c{font:.75rem/1.4 var(--mono);color:var(--muted)}
 .note{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:20px;display:grid;gap:10px}
 .note ul{margin:0;padding-left:1.2em;display:grid;gap:6px;font-size:.95rem}
 </style>
@@ -169,19 +175,39 @@ header p{color:var(--muted)}
   <span class="eyebrow">What they have in common</span>
   <div class="threads">
     <div><h3>Saturated blue + hot orange</h3><p>All three sites and the Zohran poster use this pairing. It's now the standard look for left-wing campaigns in New York. Copying it would make Amanda look like a Zohran knockoff in Milwaukee.</p></div>
-    <div><h3>Heavy headlines, some hand-lettered</h3><p>Every reference leads with bold, blocky type that reads from a car. The two images go further: drop shadows, stacked layers and brush script, the language of hand-painted signs.</p></div>
+    <div><h3>Hand-lettered headlines</h3><p>Every reference leads with bold, blocky type that reads from a car. The two images go further: drop shadows, stacked layers and brush script, the language of hand-painted signs.</p></div>
     <div><h3>Language access as part of the brand</h3><p>Claire puts Español in the main nav. The Zohran system was built to work in seven languages. For a district that's about 70% Hispanic, bilingual design needs to be there from the start.</p></div>
     <div><h3>One accent color, used sparingly</h3><p>Orange shows up as punctuation, never as body text. White text on that orange fails contrast. That's fine on a big sign and a problem on a web button.</p></div>
   </div>
 </section>
 
 <section class="section">
+  <span class="eyebrow">Lettering</span>
+  <h2>Hand-painted, not typeset</h2>
+  <p>The lettering should look like a sign painter made it, like the hand-painted rótulos on storefronts along Cesar Chavez Drive and National Avenue. This is the part of the look no other campaign has, and it carries over to every palette below.</p>
+  <div class="letter">
+    <div><h3>Stacked shadows</h3><p>Two or three offset layers behind the letters (white, then a second color), as in Bodega and the Zohran poster. They read from far away and still work in two-color print.</p></div>
+    <div><h3>Script for connecting words</h3><p>The big words are bold and blocky; the small words ("for", "por", "vota") are a loose brush script. That mix is what makes it feel painted rather than typed.</p></div>
+    <div><h3>Highlight strokes and slight wobble</h3><p>Painted highlights inside the letters, a brushed underline, edges that aren't perfectly clean. Use it on the name and the slogan; keep body text plain so it stays readable.</p></div>
+    <div><h3>Have a real sign painter make the wordmark</h3><p>Pay a local sign painter to hand-letter "Avalos" once, then scan it for print and the web. It needs a budget line and an approver. The free fonts below are stand-ins until then.</p></div>
+  </div>
+  <div class="specimens">
+    <div class="spec"><span class="s" style="font-family:'Shrikhand',serif;text-shadow:2px 2px 0 var(--bg),4px 4px 0 #c3251c">Avalos</span><span class="c">Shrikhand + stacked shadow · bold painted display</span></div>
+    <div class="spec"><span class="s" style="font-family:'Knewave',sans-serif;text-shadow:3px 3px 0 #f2a900">AVALOS</span><span class="c">Knewave · brush capitals</span></div>
+    <div class="spec"><span class="s" style="font-family:'Titan One',sans-serif;text-shadow:2px 2px 0 var(--bg),4px 4px 0 #d4006f">Avalos</span><span class="c">Titan One · rounded storefront letters</span></div>
+    <div class="spec"><span class="s" style="font-family:'Bungee',sans-serif;font-size:2rem;text-shadow:3px 3px 0 #b0171f">AVALOS</span><span class="c">Bungee · made for street signs</span></div>
+    <div class="spec"><span class="s" style="font-family:'Yellowtail',cursive">por el Distrito 8</span><span class="c">Yellowtail · sign-painter script</span></div>
+    <div class="spec"><span class="s" style="font-family:'Kaushan Script',cursive">¡Vota Avalos!</span><span class="c">Kaushan Script · brush script</span></div>
+  </div>
+</section>
+
+<section class="section">
   <span class="eyebrow">Draft palettes for Amanda</span>
-  <p>Four directions. Each takes the energy of the references and grounds it in Milwaukee's South Side instead of New York. Contrast ratios are WCAG; 4.5:1 is the minimum for body text.</p>
+  <p>Four color directions, each shown with the hand-painted lettering. Each takes the energy of the references and grounds it in Milwaukee's South Side instead of New York. Contrast ratios are WCAG; 4.5:1 is the minimum for body text.</p>
   <div class="drafts">
 
     <div class="draft">
-      <div class="sign" style="background:#efe4cc;color:#1b3a8c"><span class="sub" style="color:#c8372a">Common Council · District 8</span><span class="nm">AVALOS</span><span class="pill" style="background:#1b3a8c;color:#f2a900">Vote · Vota</span></div>
+      <div class="sign" style="background:#efe4cc;color:#1b3a8c"><span class="sub" style="color:#c8372a">Common Council · District 8</span><span class="nm" style="font-family:'Knewave',var(--display);font-weight:400;font-stretch:normal;text-shadow:3px 3px 0 #f2a900,5px 5px 0 #c3251c">AVALOS</span><span style="font:400 1.7rem/1 'Damion',cursive;color:#c3251c">para el pueblo</span><span class="pill" style="background:#1b3a8c;color:#f2a900">Vote · Vota</span></div>
       <h3>A · Cream City</h3>
       <div class="sw">
         <div class="chip"><i style="background:#efe4cc"></i><b>#EFE4CC</b>cream brick</div>
@@ -194,7 +220,7 @@ header p{color:var(--muted)}
     </div>
 
     <div class="draft">
-      <div class="sign" style="background:#d4006f;color:#fff"><span class="sub" style="color:#ffc21a">Concejala · Distrito 8</span><span class="nm">AVALOS</span><span class="pill" style="background:#1d1a3a;color:#ffc21a">Vote · Vota</span></div>
+      <div class="sign" style="background:#d4006f;color:#fff"><span class="sub" style="color:#ffc21a">Concejala · Distrito 8</span><span class="nm" style="font-family:'Titan One',var(--display);font-weight:400;font-stretch:normal;text-shadow:3px 3px 0 #1d1a3a,6px 6px 0 #ffc21a">Avalos</span><span style="font:400 1.5rem/1 'Kaushan Script',cursive;color:#fff">¡Vota!</span><span class="pill" style="background:#1d1a3a;color:#ffc21a">Vote · Vota</span></div>
       <h3>B · Rosa mexicano</h3>
       <div class="sw">
         <div class="chip"><i style="background:#d4006f"></i><b>#D4006F</b>rosa mexicano</div>
@@ -208,7 +234,7 @@ header p{color:var(--muted)}
 
     <div class="draft">
       <div class="sign" style="background:#f4d106;color:#282381"><span class="sub" style="color:#282381">Common Council · District 8</span><span class="nm" style="font-family:'Shrikhand',var(--display);font-weight:400;font-stretch:normal;letter-spacing:0;text-shadow:3px 3px 0 #fff,6px 6px 0 #c3251c">Avalos</span><span style="font:400 1.6rem/1 'Yellowtail',cursive;color:#a81e16">por el Distrito 8</span><span class="pill" style="background:#282381;color:#f4d106">Vote · Vota</span></div>
-      <h3>D · Rótulo</h3>
+      <h3>C · Rótulo</h3>
       <div class="sw">
         <div class="chip"><i style="background:#f4d106"></i><b>#F4D106</b>lemon yellow</div>
         <div class="chip"><i style="background:#282381"></i><b>#282381</b>sign navy</div>
@@ -220,8 +246,8 @@ header p{color:var(--muted)}
     </div>
 
     <div class="draft">
-      <div class="sign" style="background:#b0171f;color:#fff"><span class="sub" style="color:#f6efe3">Common Council · District 8</span><span class="nm">AVALOS</span><span class="pill" style="background:#f6efe3;color:#1a1a1a">Vote · Vota</span></div>
-      <h3>C · Union hall</h3>
+      <div class="sign" style="background:#b0171f;color:#fff"><span class="sub" style="color:#f6efe3">Common Council · District 8</span><span class="nm" style="font-family:'Bungee',var(--display);font-weight:400;font-stretch:normal;text-shadow:4px 4px 0 #1a1a1a">AVALOS</span><span style="font:400 1.3rem/1 'Permanent Marker',cursive;color:#f6efe3">for working people</span><span class="pill" style="background:#f6efe3;color:#1a1a1a">Vote · Vota</span></div>
+      <h3>D · Union hall</h3>
       <div class="sw">
         <div class="chip"><i style="background:#b0171f"></i><b>#B0171F</b>brick red</div>
         <div class="chip"><i style="background:#f6efe3"></i><b>#F6EFE3</b>paper</div>
@@ -239,7 +265,7 @@ header p{color:var(--muted)}
   <ul>
     <li>Decide who approves the final look (likely Shua and Amanda). It sets message consistency across lit, mail, web, social and signs.</li>
     <li>Test the chosen palette in one-color and two-color print. That's how most yard signs and door lit get printed cheaply.</li>
-    <li>Pick free Google Fonts (Archivo, as used here, or similar) so volunteers can use them in Canva without buying a license.</li>
+    <li>Use the free stand-in fonts shown here (all Google Fonts) so volunteers can make graphics in Canva without buying a license, until the hand-lettered wordmark exists.</li>
   </ul>
 </section>
 </div>
